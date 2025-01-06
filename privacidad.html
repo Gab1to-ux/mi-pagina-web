@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad Amorosa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #E84A5F;
+            --secondary-color: #FF847C;
+            --accent-color: #FECEAB;
+            --background-color: #FFF9F9;
+            --text-color: #2A363B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background: var(--background-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(232, 74, 95, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(254, 206, 171, 0.1) 0%, transparent 20%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(232, 74, 95, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            animation: borderFlow 3s infinite linear;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 20px;
+            background: white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateX(10px);
+            background: linear-gradient(to right, white, rgba(254, 206, 171, 0.1));
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+            opacity: 0;
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        li::before {
+            content: '♥';
+            position: absolute;
+            left: -1rem;
+            color: var(--primary-color);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        li:hover::before {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        .update-date {
+            text-align: center;
+            color: var(--text-color);
+            font-style: italic;
+            margin-bottom: 3rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .accept-button {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            color: white;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accept-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(232, 74, 95, 0.2);
+        }
+
+        .accept-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%) rotate(45deg);
+            animation: buttonGlow 3s infinite;
+        }
+
+        @keyframes borderFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        @keyframes slideIn {
+            from { 
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes buttonGlow {
+            0% { transform: translate(-50%, -50%) rotate(45deg) translateY(100%); }
+            100% { transform: translate(-50%, -50%) rotate(45deg) translateY(-100%); }
+        }
+
+        @keyframes floatingHeart {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Política de Privacidad Amorosa ❤️</h1>
+        <p class="update-date">Última actualización: <span id="currentDate"></span></p>
+
+        <div class="section">
+            <h2>1. Información que Recopilamos</h2>
+            <ul>
+                <li>Tus miedos, sueños y metas a corto, mediano y largo plazo.</li>
+                <li>Tus anécdotas embarazosas que juraste no contar a nadie más.</li>
+                <li>Tus gustos raros, como esa canción que no admites que amas.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Uso de la Información</h2>
+            <ul>
+                <li>Personalización del Cariño: Diseñar detalles y sorpresas que se alineen con lo que te hace feliz.</li>
+                <li>Soporte Emocional: Estar ahí para ti en los días difíciles con palabras que reconforten.</li>
+                <li>Optimización del Tiempo Juntos: Crear momentos inolvidables ajustados a tus preferencias.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Compartición de Información</h2>
+            <ul>
+                <li>Con tu autorización explícita y por escrito (o un "sí, puedes decirlo" acompañado de un beso).</li>
+                <li>Si es necesario para sorprenderte con algo especial.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Seguridad de la Información</h2>
+            <ul>
+                <li>Todos los secretos se almacenan en una memoria interna segura (mi mente).</li>
+                <li>Solo tú tienes la llave para acceder a los sentimientos más profundos de esta relación.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Derechos del Usuario</h2>
+            <ul>
+                <li>Derecho a Ser Escuchado: Siempre tendrás un espacio para expresar tus emociones.</li>
+                <li>Derecho a la Transparencia: Serás informado/a de cualquier cambio importante.</li>
+                <li>Derecho a Solicitar Abrazos: En cualquier momento, sin limitaciones.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>❤️ Tu privacidad emocional es nuestro mayor tesoro ❤️</p>
+            <button class="accept-button" id="acceptButton">Acepto con Todo mi Amor</button>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        const currentDate = new Date().toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        document.getElementById('currentDate').textContent = currentDate;
+
+        // Animate list items sequentially
+        const listItems = document.querySelectorAll('li');
+        listItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Add floating hearts animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '♥';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.bottom = '-20px';
+            heart.style.color = `hsl(${Math.random() * 40 + 340}, 100%, 65%)`;
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            heart.style.animation = `floatingHeart ${Math.random() * 2 + 3}s ease-out forwards`;
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        // Accept button interaction
+        const acceptButton = document.getElementById('acceptButton');
+        let accepted = false;
+
+        acceptButton.addEventListener('click', () => {
+            if (!accepted) {
+                acceptButton.textContent = '❤️ Amor Aceptado ❤️';
+                accepted = true;
+                
+                // Create multiple hearts
+                for (let i = 0; i < 15; i++) {
+                    setTimeout(createHeart, i * 200);
+                }
+            }
+        });
+
+        // Hover effect on sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                setTimeout(createHeart, 0);
+                setTimeout(createHeart, 200);
+            });
+        });
+
+
+        
+    </script>
+</body>
+</html>

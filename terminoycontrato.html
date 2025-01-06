@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones del Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --text-color: #2d3436;
+            --background-color: #fff5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .update-date {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            background: rgba(255,107,107,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '❤️';
+            position: absolute;
+            left: -1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        li:hover::before {
+            opacity: 1;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .heart {
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .signature-section {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .sign-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sign-button:hover {
+            transform: scale(1.05);
+            background: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Términos y Condiciones del Amor Verdadero</h1>
+        <p class="update-date">Última actualización: <span id="currentDate"></span></p>
+
+        <div class="section">
+            <h2>1. Definiciones del Contrato Amoroso</h2>
+            <ul>
+                <li>"Nosotros": Representa la unión oficial de ambas partes en esta relación.</li>
+                <li>"Cláusula de Besos": Acuerdo mutuo para intercambiar cariño de forma regular y espontánea.</li>
+                <li>"Servicio": Incluye, pero no se limita a, cenas, abrazos interminables, películas compartidas y palabras de apoyo en días difíciles.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Términos de Uso del Corazón</h2>
+            <ul>
+                <li>Ambas partes se comprometen a manejar con cuidado los sentimientos del otro.</li>
+                <li>Está estrictamente prohibida la mentira.</li>
+                <li>El ghosting emocional no está permitido.</li>
+                <li>Cambiar los planes requiere una sonrisa adorable como disculpa.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Política de Privacidad Amorosa</h2>
+            <ul>
+                <li>Tu información sensible será resguardada con la más alta encriptación emocional.</li>
+                <li>Los datos compartidos durante momentos vulnerables son confidenciales.</li>
+                <li>La mediación de terceros requiere autorización previa.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Política de Cookies (y Chocolates)</h2>
+            <ul>
+                <li>Los dulces son una expresión de afecto que no se puede rechazar sin justificación.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Actualización de los Términos</h2>
+            <ul>
+                <li>El Fondo de Viajes Soñados</li>
+                <li>La Expansión de Mascotas Comunes</li>
+                <li>El Calendario de Abrazos Extraordinarios</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>❤️ Gracias por elegir este amor. Juntos somos infinitamente mejores. ❤️</p>
+        </div>
+
+        <div class="signature-section">
+            <button class="sign-button" id="signButton">Firmar con Amor</button>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        const currentDate = new Date().toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        document.getElementById('currentDate').textContent = currentDate;
+
+        // Add signature button interaction
+        const signButton = document.getElementById('signButton');
+        let signed = false;
+
+        signButton.addEventListener('click', () => {
+            if (!signed) {
+                signButton.textContent = '❤️ Contrato Firmado con Amor ❤️';
+                signButton.style.background = '#4ecdc4';
+                signed = true;
+                
+                // Create hearts animation
+                for (let i = 0; i < 10; i++) {
+                    createHeart();
+                }
+            }
+        });
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.fontSize = '24px';
+            heart.style.animation = `floatHeart ${Math.random() * 2 + 3}s ease-out forwards`;
+            document.body.appendChild(heart);
+
+            // Remove heart after animation
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // Add floating hearts animation
+        document.styleSheets[0].insertRule(`
+            @keyframes floatHeart {
+                to {
+                    transform: translateY(-100vh) rotate(${Math.random() * 360}deg);
+                    opacity: 0;
+                }
+            }
+        `, document.styleSheets[0].cssRules.length);
+
+        // Add hover effect to sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                section.style.transform = 'translateY(-5px)';
+            });
+            section.addEventListener('mouseleave', () => {
+                section.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

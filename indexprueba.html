@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuPaginaWeb💘</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    background-color: #fff5f5;
+    color: #4a3236;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(199, 143, 155, 0.15);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.romantic-nav {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(199, 143, 155, 0.15);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 114, 143, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.heart-icon {
+    color: #d4728f;
+    font-size: 1.8rem;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.nav-logo h1 {
+    font-family: 'Playfair Display', serif;
+    color: #c25e7c;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #735c62;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.link-icon {
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover .link-icon,
+.nav-link.active .link-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #d4728f;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #d4728f;
+    background: rgba(212, 114, 143, 0.1);
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+.container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    position: relative;
+    background: #d4728f;
+    color: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
+}
+
+.btn::after, .btn::before {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #e8a1b3;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translate(-6px, -6px);
+    background: #c25e7c;
+}
+
+.btn:hover::after {
+    transform: translate(3px, 3px);
+}
+
+.btn:hover::before {
+    transform: translate(6px, 6px);
+}
+
+.main-content {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-family: 'Playfair Display', serif;
+    color: #c25e7c;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(199, 143, 155, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    aspect-ratio: 16/9; /* Mantiene una proporción consistente */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    object-position: center; /* Centra la imagen */
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(212, 114, 143, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: rgba(194, 94, 124, 0.9);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .carousel-slide {
+        aspect-ratio: 4/3; /* Proporción más cuadrada para móviles */
+    }
+}
+/* Cards Styles */
+.cards-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(199, 143, 155, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(232, 161, 179, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(199, 143, 155, 0.25);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #c25e7c;
+}
+
+.card-text {
+    color: #735c62;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-price {
+    font-size: 1.4rem;
+    color: #d4728f;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #faf2f4;
+    color: #4a3236;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(212, 114, 143, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-section h3 {
+    color: #c25e7c;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.footer-section p {
+    color: #735c62;
+    line-height: 1.8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #d4728f;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #c25e7c;
+    transform: scale(1.1);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #735c62;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d4728f;
+    padding-left: 5px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    color: #735c62;
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    margin-top: 20px;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(212, 114, 143, 0.3);
+    border-radius: 20px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #d4728f;
+    box-shadow: 0 0 10px rgba(212, 114, 143, 0.2);
+}
+
+.newsletter-button {
+    background: #d4728f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+}
+
+.newsletter-button:hover {
+    background: #c25e7c;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(212, 114, 143, 0.2);
+}
+
+.footer-bottom p {
+    color: #8c7176;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*pagina*/
+.content-section {
+    max-width: 1200px;
+    margin: 120px auto 40px;
+    padding: 0 20px;
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 60px;
+}
+
+.content-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.content-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(199, 143, 155, 0.2);
+    transition: all 0.3s ease;
+}
+
+.content-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(199, 143, 155, 0.25);
+}
+
+.content-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.content-image:hover img {
+    transform: scale(1.05);
+}
+
+.content-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-title {
+    font-family: 'Playfair Display', serif;
+    color: #c25e7c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.content-description {
+    color: #735c62;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.content-highlight {
+    font-family: 'Playfair Display', serif;
+    color: #d4728f;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .content-row {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .content-row:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .content-image img {
+        height: 300px;
+    }
+}
+
+/*pagina3*/
+.hearts-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.contact-main {
+    position: relative;
+    margin-top: 100px;
+    padding: 40px 20px;
+    z-index: 1;
+}
+
+.romantic-header {
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.romantic-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #c25e7c;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.romantic-header p {
+    color: #735c62;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-form-container {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(199, 143, 155, 0.2);
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 1s ease forwards 0.5s;
+}
+
+.romantic-image {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeInRight 1s ease forwards 0.5s;
+}
+
+.romantic-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(199, 143, 155, 0.2);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #c25e7c;
+    font-family: 'Playfair Display', serif;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(212, 114, 143, 0.3);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-family: 'Lora', serif;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #d4728f;
+    box-shadow: 0 0 10px rgba(212, 114, 143, 0.2);
+}
+
+textarea.form-input {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #d4728f;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background: #c25e7c;
+    transform: translateY(-3px);
+}
+
+.submit-btn::after {
+    content: '❤';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover::after {
+    animation: heartPop 0.5s ease;
+}
+
+.floating-hearts {
+    position: absolute;
+    pointer-events: none;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes heartPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column-reverse;
+    }
+
+    .romantic-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .contact-form-container {
+        width: 100%;
+    }
+}
+
+.success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(199, 143, 155, 0.3);
+    text-align: center;
+    z-index: 1000;
+}
+
+.success-message h3 {
+    color: #c25e7c;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.success-message p {
+    color: #735c62;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}    
+    /* Estilos adicionales para las nuevas secciones */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Estilos para la página Ella */
+        .content-section {
+            max-width: 1200px;
+            margin: 120px auto 40px;
+            padding: 0 20px;
+        }
+
+        .content-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 100px;
+            gap: 60px;
+        }
+
+        .content-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .content-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(199, 143, 155, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .content-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(199, 143, 155, 0.25);
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .content-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .content-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content-title {
+            font-family: 'Playfair Display', serif;
+            color: #c25e7c;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-description {
+            color: #735c62;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .content-highlight {
+            font-family: 'Playfair Display', serif;
+            color: #d4728f;
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        /* Estilos para la página de Contacto */
+        .hearts-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .contact-main {
+            position: relative;
+            margin-top: 100px;
+            padding: 40px 20px;
+            z-index: 1;
+        }
+
+        .romantic-header {
+            text-align: center;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .romantic-header h1 {
+            font-family: 'Playfair Display', serif;
+            color: #c25e7c;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .romantic-header p {
+            color: #735c62;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-form-container {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(199, 143, 155, 0.2);
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: fadeInLeft 1s ease forwards 0.5s;
+        }
+
+        .romantic-image {
+            flex: 1;
+            opacity: 0;
+            transform: translateX(30px);
+            animation: fadeInRight 1s ease forwards 0.5s;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c25e7c;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(212, 114, 143, 0.3);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            font-family: 'Lora', serif;
+        }
+
+        .floating-hearts {
+            position: absolute;
+            pointer-events: none;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 900px) {
+            .content-row {
+                flex-direction: column;
+                margin-bottom: 60px;
+            }
+
+            .content-row:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .content-image img {
+                height: 300px;
+            }
+
+            .contact-container {
+                flex-direction: column-reverse;
+            }
+
+            .romantic-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .contact-form-container {
+                width: 100%;
+            }
+        }
+
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(199, 143, 155, 0.3);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .btn.active {
+            background: #c25e7c;
+            transform: translateY(-3px);
+        }
+
+        .message-animation-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.message-animation {
+    width: 100%;
+    height: 100%;
+}
+
+.message-animation.hidden {
+    display: none;
+}
+
+.arrow-path {
+    stroke-dasharray: 160;
+    stroke-dashoffset: 160;
+}
+
+@keyframes shootArrow {
+    0% {
+        stroke-dashoffset: 160;
+        opacity: 0;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeArrowHead {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+@keyframes popHeart {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-message {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.success-message.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.phrases-main {
+    max-width: 1200px;
+    margin: 120px auto 40px;
+    padding: 0 20px;
+}
+
+.romantic-header {
+    text-align: center;
+    margin-bottom: 50px;
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.romantic-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #c25e7c;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.romantic-header p {
+    color: #735c62;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.phrases-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.phrase-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(199, 143, 155, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 114, 143, 0.2);
+    text-align: center;
+}
+
+.phrase-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(199, 143, 155, 0.25);
+}
+
+.phrase-box p {
+    color: #735c62;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .romantic-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .phrases-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .phrase-box {
+        padding: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    
+   
+    <div class="hearts-container"></div>
+
+    <header>
+        <nav class="romantic-nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="heart-icon">♥</span>
+                    <h1>Me Gustas</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#nosotros" class="nav-link active" onclick="showPage('nosotros', this)">
+                        <span class="link-icon">♥</span>
+                        <span class="link-text">Nosotros</span>
+                    </a>
+                    <a href="#ella" class="nav-link" onclick="showPage('ella', this)">
+                        <span class="link-icon">♡</span>
+                        <span class="link-text">Ella</span>
+                    </a>
+                    <a href="#frases" class="nav-link" onclick="showPage('frases', this)">
+                        <span class="link-icon">❀</span>
+                        <span class="link-text">Frases</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Página Nosotros -->
+    <section id="nosotros" class="page-section active">
+        <div class="main-content">
+            <h1>TuPrimeraPaginaWeb❤️</h1>
+            <div class="carousel">
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+                
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="./img/snuppy1.webp" alt="Slide 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/snupy3.jpg" alt="Slide 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/snoopy-love-patricia-l-sexton.jpg" alt="Slide 3">
+                    </div>
+                </div>
+            
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            
+                    <section class="cards-section">
+                        <div class="cards-grid">
+                            <!-- 9 cartas -->
+                            <div class="card">
+                                <img src="./img/card2.webp" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">אהבה</h3>
+                                    <p class="card-text">Me gustas más de lo que las palabras pueden describir.</p>
+                                    <div class="card-price">Me gustas</div>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="./img/cardr.jpeg" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">נשמה</h3>
+                                    <p class="card-text">Tu sonrisa me encanta, iluminas todo a tu alrededor.</p>
+                                    <div class="card-price">Me encantas</div>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="./img/card3.jpg" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">לב</h3>
+                                    <p class="card-text">Deslumbras con tu belleza, como un sol en plena tarde.</p>
+                                    <div class="card-price">Me deslumbras</div>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="./img/card4.jpeg" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">מתוקה</h3>
+                                    <p class="card-text">Eres una persona fantástica, única en cada forma.</p>
+                                    <div class="card-price">Eres fantastica</div>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="./img/cardr3.jpeg" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">מלאך</h3>
+                                    <p class="card-text">Contigo todo es poesía, cada momento contigo es mágico.</p>
+                                    <div class="card-price">Eres poesía</div>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="./img/card6.jpg" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">יופי</h3>
+                                    <p class="card-text">Eres mi arte favorito, una obra de amor y pasión.</p>
+                                    <div class="card-price">Eres arte</div>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="./img/card7.webp" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">השתוקקות</h3>
+                                    <p class="card-text">Tu presencia es etérea, como un suspiro en el viento.</p>
+                                    <div class="card-price">Etérea</div>
+                                </div>
+                            </div>
+            
+                            <div class="card">
+                                <img src="./img/cardr2.jpeg" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">חלום</h3>
+                                    <p class="card-text">Eres idílica, como un sueño que nunca quiero despertar.</p>
+                                    <div class="card-price">Ídilica</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <img src="./img/card9.jpg" alt="" class="card-image">
+                                <div class="card-content">
+                                    <h3 class="card-title">נשיקה</h3>
+                                    <p class="card-text">Tu voz es melódica, una canción que quiero escuchar para siempre.</p>
+                                    <div class="card-price">Melódica</div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </section>
+                </div>
+            </section>
+            
+
+    <!-- Página Ella -->
+    <section id="ella" class="page-section">
+       
+        <div class="content-section">
+            <a>Perdon por robar tus fotos no tenía másD:</a>
+            <div class="content-row">
+                
+                <div class="content-image">
+                    <img src="./img/ella1.jpeg" alt="Ella 1">
+                </div>
+                <div class="content-text">
+                    <h2 class="content-title">Elegancia Natural</h2>
+                    <p class="content-description">
+                        Descubre la belleza en su forma más pura. Nuestras colecciones están diseñadas para realzar tu belleza natural, 
+                        permitiéndote brillar con confianza en cada momento de tu día.
+                    </p>
+                    <p class="content-highlight">"La verdadera belleza comienza cuando decides ser tú misma"</p>
+                </div>
+            </div>
+            <div class="content-row">
+                <div class="content-image">
+                    <img src="./img/ella2.jpeg" alt="Ella 2">
+                </div>
+                <div class="content-text">
+                    <h2 class="content-title">Estilo Atemporal</h2>
+                    <p class="content-description">
+                        Cada pieza está cuidadosamente seleccionada para crear looks que trascienden las tendencias pasajeras. 
+                        Nuestro compromiso es ofrecerte prendas que te hagan sentir especial en cualquier ocasión.
+                    </p>
+                    <p class="content-highlight">"El estilo es una forma de decir quién eres sin tener que hablar"</p>
+                </div>
+            </div>
+            <div class="content-row">
+                <div class="content-image">
+                    <img src="./img/ella3.jpeg" alt="Ella 1">
+                </div>
+                <div class="content-text">
+                    <h2 class="content-title">Elegancia Natural</h2>
+                    <p class="content-description">
+                        Descubre la belleza en su forma más pura. Nuestras colecciones están diseñadas para realzar tu belleza natural, 
+                        permitiéndote brillar con confianza en cada momento de tu día.
+                    </p>
+                    <p class="content-highlight">"La verdadera belleza comienza cuando decides ser tú misma"</p>
+                </div>
+            </div>    
+        </div>
+    </section>
+
+<!-- Página de Frases Románticas -->
+<section id="frases" class="page-section">
+    <div class="phrases-main">
+        <div class="romantic-header">
+            <h1>Palabras que Enamoran 💖</h1>
+            <p>En este rincón, encontrarás frases que inspiran, conmueven y celebran el amor en todas sus formas.</p>
+        </div>
+
+        <div class="phrases-container">
+            <div class="phrase-box">
+                <p>🌹 "Amarte no es un hábito, es mi mayor razón de ser."</p>
+            </div>
+            
+            <div class="phrase-box">
+                <p>✨ "En tus ojos, encontré el universo que siempre soñé explorar."</p>
+            </div>
+            
+            <div class="phrase-box">
+                <p>💌 "El mejor lugar del mundo es dentro de tus abrazos."</p>
+            </div>
+            
+            <div class="phrase-box">
+                <p>🎶 "Si la vida es una canción, tú eres mi nota favorita."</p>
+            </div>
+            
+            <div class="phrase-box">
+                <p>🌙 "Quiero ser tu 'buenas noches' todas las noches."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <!-- Columna 1: info -->
+                <div class="footer-section">
+                    <h3>Sobre mi</h3>
+                    <p>Soy un simple ex-estudiante de ingeniería en informática, apasionado por la cultura Pop, a la música electronica, humilde, de casita, buen partido.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i>📘</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i>📸</i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i>🐦</i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Columna 2: Enlaces útiles -->
+                <div class="footer-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul class="footer-links">
+                        <li><a href="./terminoycontrato.html">Términos y Condiciones</a></li>
+                        <li><a href="./privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 3: Contacto -->
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>📍 Dirección: Pje. Cuatro 36, 8720780 Quilicura, Región Metropolitana</li>
+                        <li>📞 Teléfono: +56935177005</li>
+                        <li>✉️ Email: gabriel.saezm3@gmail.com</li>
+                    </ul>
+                </div>
+    
+                <!-- Columna 4: algun frase -->
+                <div class="footer-section">
+                    <h3>Me encantas</h3>
+                    <p>Tu aceptame y me entrego en alma y cuerpo bb.</p>
+                    
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tu pagina web chiquita. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    <script>
+        // Función para mostrar páginas
+        function showPage(pageId, button) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostrar la sección seleccionada
+            document.getElementById(pageId).classList.add('active');
+
+            // Actualizar botones activos
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+        }
+
+        // Carrusel
+        const carousel = document.querySelector('.carousel-container');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let currentSlide = 0;
+        const slideCount = slides.length;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+            updateCarousel();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+
+        // Función para crear corazones flotantes
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤';
+            heart.className = 'floating-hearts';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+            heart.style.color = '#d4728f';
+            
+            document.querySelector('.hearts-container').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // Crear corazones periódicamente
+        setInterval(createHeart, 300);
+
+        // Autoplay carrusel
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            updateCarousel();
+        }, 5000);
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const email = formData.get('email');
+    const message = formData.get('message');
+    const name = formData.get('name');
+    
+    // Show animation
+    const animation = document.querySelector('.message-animation');
+    animation.classList.remove('hidden');
+    
+    // Animate elements
+    const arrowPath = animation.querySelector('.arrow-path');
+    const arrowHead = animation.querySelector('.arrow-head');
+    const heart = animation.querySelector('.heart');
+    
+    arrowPath.style.animation = 'shootArrow 2s forwards';
+    arrowHead.style.animation = 'fadeArrowHead 2s forwards';
+    
+    // Delay heart animation
+    setTimeout(() => {
+        heart.style.animation = 'popHeart 1s forwards';
+    }, 1000);
+    
+  // Actualizar la función showPage para manejar los nuevos elementos de navegación
+function showPage(pageId, link) {
+    // Ocultar todas las secciones
+    document.querySelectorAll('.page-section').forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    // Mostrar la sección seleccionada
+    document.getElementById(pageId).classList.add('active');
+
+    // Actualizar enlaces activos
+    document.querySelectorAll('.nav-link').forEach(navLink => {
+        navLink.classList.remove('active');
+    });
+    link.classList.add('active');
+}
+    
+});
+    </script>
+</body>
+</html>
